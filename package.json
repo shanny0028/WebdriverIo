@@ -30,7 +30,7 @@
     "test3": "run-s test:*",
     "test:lint": "eslint 'src/**/*.ts' 'test/**/*.js!(setup.js)'",
     "test:unit": "jest --config=jest.config.cjs --detectOpenHandles",
-    "test:features": "wdio run wdio.BUILD.conf.ts",
+    "report": "node ./src/support/index.ts ",
     "test": "wdio run ./wdio.conf.ts --cucumberOpts.tagExpression"
   },
   "devDependencies": {

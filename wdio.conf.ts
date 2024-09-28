@@ -37,12 +37,12 @@ const config = {
     connectionRetryCount: 3,
     framework: 'cucumber',
     // services: ['chromedriver'],
-    reporters: ['spec',
-      ['cucumberjs-json',
-        {
-          jsonfolder:'./src/reports'
-        }
-      ]
+    reporters: [
+      'spec',
+      ['cucumberjs-json', {
+        jsonFolder: './src/reports',
+        language: 'en', // Optional, but helps if needed
+      }]
     ],
     cucumberOpts: {
         backtrace: false,
