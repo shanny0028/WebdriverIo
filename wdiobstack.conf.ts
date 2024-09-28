@@ -16,15 +16,10 @@ const config = {
     capabilities: [
         {
             browserName: 'chrome',
-            'goog:chromeOptions': {
-                args: [
-                    '--disable-web-security',
-                    '--disable-features=BiDiMapper',
-                    '--disable-dev-shm-usage',
-                    '--disable-gpu',
-                    '--no-sandbox',
-                    '--disable-extensions',
-                ],
+            'bstack:Options': {
+              os:"windows",
+              buildName:'bstack-chrome-womdows', 
+              osversion:'11'
             },
             acceptInsecureCerts: true,
         },
@@ -56,9 +51,7 @@ const config = {
         source: true,
         profile: [],
         require: [
-            './src/steps/given.ts',
-            './src/steps/then.ts',
-            './src/steps/when.ts',
+            './src/steps/*.ts',
         ],
         scenarioLevelReporter: false,
         order: 'defined',
